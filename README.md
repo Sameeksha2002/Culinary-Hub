@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Culinary Hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Culinary Hub is a web application designed to explore a variety of meals with features such as searching for meals, filtering by ingredients, and selecting meals by category.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### 1. Search Any Meal
 
-### `npm start`
+Utilize the search functionality to find information about a specific meal. Enter the name of the meal you're looking for, and the app will provide details about it.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Search by Ingredients
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Explore meals based on the ingredients you have on hand. Input the ingredients you want to use, and the app will display a variety of recipes that match your criteria.
 
-### `npm test`
+### 3. Meal by Category
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Categorize and discover meals based on different categories. Choose a category such as "Breakfast," "Lunch," or "Dessert," and explore a curated selection of meals within that category.
 
-### `npm run build`
+## Technical Details
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- This project was bootstrapped with [Create React App (CRA)](https://create-react-app.dev/).
+- It utilizes the public API provided by [The Meal DB](https://www.themealdb.com/api.php) to fetch meal data.
+- Styling is done using [Tailwind CSS](https://tailwindcss.com/) and [Material Tailwind](https://material-tailwind.com/).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Running the App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the app locally, use the following command:
 
-### `npm run eject`
+### `npm run start`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This will start the development server, and you can access the app at [http://localhost:3000] in your browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project relies on the following external libraries:
 
-## Learn More
+- [Axios](https://axios-http.com/): Axios is used for making HTTP requests in a simple and efficient manner.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [React Router DOM](https://reactrouter.com/): React Router DOM is utilized for navigation within the React application, enabling a seamless user experience.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React Device Detect](https://www.npmjs.com/package/react-device-detect): React Device Detect is employed to detect the device type, allowing for optimized rendering based on the user's device.
 
-### Code Splitting
+- [Tailwind CSS](https://tailwindcss.com/): Tailwind CSS provides a utility-first CSS framework, streamlining the styling process and enhancing the overall design of the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Material Tailwind](https://material-tailwind.com/): Material Tailwind offers Material Design components for Tailwind CSS, enhancing the visual appeal and user interface of the application.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
