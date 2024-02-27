@@ -10,8 +10,16 @@ import SearchMeal from "./components/DiscoverMeal/SearchMeal";
 import CategoriesCont from "./components/AllCategories/CategoriesCont";
 import Category from "./components/View/Category";
 import SearchByIngredients from "./components/MealByIngredients/SearchByIngredients";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function App() {
+  //INITIALIZING AOS
+  useEffect(() => {
+    AOS.init();
+  });
+
   return (
     <div className="App">
       <Router>

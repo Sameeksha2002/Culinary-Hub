@@ -8,6 +8,8 @@ const CategoryCard = ({ category }) => {
     <Link
       to={`/all-categories/${category.strCategory}`}
       className="group m-0 p-0"
+      data-aos="fade-right"
+      data-aos-duration={500 + category.idCategory * 100}
     >
       <div className="categoryCard flex items-center h-4/5 w-[100%] bg-gradient-to-r from-[#eaa44f] to-[#e9d7c1] group-hover:to-[#f9f1e9] rounded-xl md:py-4">
         <img

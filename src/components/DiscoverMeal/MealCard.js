@@ -14,6 +14,8 @@ const MealCard = ({ meal, widthClass = "[80%] " }) => {
   return (
     <div
       className={`mealCard flex flex-col md:flex-row mx-auto items-center w-[45%] md:w-${widthClass} md:mb-9 p-2 md:py-3 md:pl-3 md:pr-4 bg-blue-gray-50 mt-7 rounded-t-full md:rounded-none md:rounded-l-full  justify-between overflow-hidden md:text-center `}
+      data-aos="zoom-in"
+      data-aos-duration="700"
     >
       <div className="md:w-[40%] rounded-full">
         <img src={meal.strMealThumb} alt="mealImage" className="rounded-full" />

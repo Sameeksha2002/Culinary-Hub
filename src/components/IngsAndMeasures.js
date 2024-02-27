@@ -1,7 +1,10 @@
 const IngsAndMeasures = ({ ingrAndMeas }) => {
   return (
     //divide-x-2  divide-[#ee9b00]flex  text-center md:text-left
-    <div className="my-2 lg:my-0 border-2 border-[#ee9b00] p-6 rounded-xl">
+    <div
+      className="my-2 lg:my-0 border-2 border-[#ee9b00] p-6 rounded-xl"
+      data-aos="flip-right"
+    >
       <table className="table-auto w-full text-xs md:text-base ">
         <thead>
           <tr className="underline font-bold text-lg text-[#ee9b00] lg:text-left">

@@ -34,7 +34,10 @@ const Meal = () => {
       {meal && (
         <div className="w-[80%] lg:w-[85%] mx-auto pb-5 text-[#e9e4e4]">
           {/* ----------MEAL NAME------------ */}
-          <h1 className="text-3xl lg:text-5xl pt-4 text-[#94d2bd] text-center font-bold">
+          <h1
+            className="text-3xl lg:text-5xl pt-4 text-[#94d2bd] text-center font-bold"
+            data-aos="fade-up"
+          >
             {meal && meal.strMeal}
           </h1>
 
@@ -47,10 +50,14 @@ const Meal = () => {
                   src={meal && meal.strMealThumb}
                   alt=""
                   className="rounded-lg lg:w-[25%]"
+                  data-aos="zoom-in"
                 />
 
                 {/* -----------------MEAL ORIGIN AND CATEGORY----------------  */}
-                <div className="my-3 text-center lg:text-left lg:ml-7 lg:my-0">
+                <div
+                  className="my-3 text-center lg:text-left lg:ml-7 lg:my-0"
+                  data-aos="fade-left"
+                >
                   <p>
                     <span className="font-bold text-xl"> category: </span>{" "}
                     {meal && meal.strCategory}
@@ -67,7 +74,10 @@ const Meal = () => {
               )}
 
               {/* ---------------MEAL INSTRUCTIONS---------------- */}
-              <p className="mt-4 text-center lg:text-left">
+              <p
+                className="mt-4 text-center lg:text-left"
+                data-aos="fade-right"
+              >
                 <span className="font-bold text-xl block lg:inline ">
                   Instructions:
                 </span>{" "}
