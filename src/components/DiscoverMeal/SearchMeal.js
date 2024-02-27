@@ -13,7 +13,7 @@ const SearchMeal = () => {
             Discover your next meal !
           </h1>
 
-          <FeaturesButton bgColor="[#3CB371]" hoverBgColor="amber-500" />
+          <FeaturesButton />
         </div>
 
         <div className="searchMeal flex flex-col justify-between min-h-[70%] items-center lg:items-start lg:flex-row mt-4 ">

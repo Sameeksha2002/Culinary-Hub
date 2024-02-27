@@ -14,13 +14,13 @@ const SearchMealInput = ({ baseurl, plcText }) => {
   const handleOnChange = (event) => {
     setMealValue(event.target.value);
     setMealUrl(null);
+    meal = null;
   };
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (mealValue) {
       let modStr = mealValue[0].toUpperCase() + mealValue.slice(1);
-      console.log(modStr);
       setMealUrl(modStr);
     }
   };

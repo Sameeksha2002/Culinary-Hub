@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Home from "./components/View/Home";
 import Meal from "./components/View/Meal";
 import SearchMeal from "./components/DiscoverMeal/SearchMeal";
@@ -20,6 +25,7 @@ function App() {
             path="/search-by-ingredient"
             element={<SearchByIngredients />}
           />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
     </div>
