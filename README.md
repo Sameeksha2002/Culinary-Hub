@@ -21,6 +21,7 @@ Categorize and discover meals based on different categories. Choose a category s
 - This project was bootstrapped with [Create React App (CRA)](https://create-react-app.dev/).
 - It utilizes the public API provided by [The Meal DB](https://www.themealdb.com/api.php) to fetch meal data.
 - Styling is done using [Tailwind CSS](https://tailwindcss.com/) and [Material Tailwind](https://material-tailwind.com/).
+- Animations are integrated using [AOS library](https://michalsnik.github.io/aos/).
 
 ## Running the App
 
@@ -44,4 +45,7 @@ This project relies on the following external libraries:
 - [Tailwind CSS](https://tailwindcss.com/): Tailwind CSS provides a utility-first CSS framework, streamlining the styling process and enhancing the overall design of the application.
 
 - [Material Tailwind](https://material-tailwind.com/): Material Tailwind offers Material Design components for Tailwind CSS, enhancing the visual appeal and user interface of the application.
+
+- [AOS library](https://michalsnik.github.io/aos/): AOS (Animate On Scroll) library adds scroll-triggered animations to elements on a web page, enhancing user experience by animating elements as they come into view during scrolling.
+
 
