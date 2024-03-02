@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500&family=Gideon+Roman&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500&family=Gideon+Roman&family=Raleway:ital,wght@0,100..900;1,100..900&family=Purple+Purse&display=swap");
 
 body {
   height: 100vh;
@@ -27,4 +27,19 @@ body {
 
 .btn {
   @apply bg-[#D9534F] md:mt-5 text-[#F5F5DC] p-3 rounded-3xl text-center hover:opacity-75 cursor-pointer;
+}
+
+.activeFav {
+  @apply bg-[#D9534F];
+}
+
+.favHeading {
+  font-family: "Purple Purse", serif;
+}
+
+.mobileFavClass {
+  position: static;
+  width: fit-content;
+  margin: auto;
+  padding: 0.5rem 2rem;
 }

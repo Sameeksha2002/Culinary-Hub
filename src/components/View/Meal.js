@@ -6,10 +6,15 @@ import IngsAndMeasures from "../IngsAndMeasures";
 import { isMobile, isTablet } from "react-device-detect";
 import Loading from "../Loading";
 import ItemNotFound from "../ErrorComponents/ItemNotFound";
+import { useDispatch, useSelector } from "react-redux";
+import { addMeal, removeMeal } from "../../slices/favMealSlice";
+import FavoriteToggleButton from "../Buttons/FavoritesToggleButton";
 
 const Meal = () => {
   let meal = null;
   const { id } = useParams();
+  const favMeals = useSelector((state) => state.favMeals);
+  const dispatch = useDispatch();
 
   //FETCHING MEAL
   let url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id;
@@ -21,6 +26,12 @@ const Meal = () => {
 
   //FETCHING INGREDIENTS AND MEASURES
   const { ingrAndMeas } = useFetchIngr(meal);
+
+  // CHECKING IF THE MEAL IS ALREADY PRESENT IN FAVORITES OR NOT
+  let idPresent = false;
+  if (meal) {
+    idPresent = favMeals.some((me) => me.idMeal === meal.idMeal);
+  }
 
   return (
     <div className="w-full min-h-[100vh] bg-[#0a9396]">
@@ -52,7 +63,6 @@ const Meal = () => {
                   className="rounded-lg lg:w-[25%]"
                   data-aos="zoom-in"
                 />
-
                 {/* -----------------MEAL ORIGIN AND CATEGORY----------------  */}
                 <div
                   className="my-3 text-center lg:text-left lg:ml-7 lg:my-0"
@@ -66,6 +76,25 @@ const Meal = () => {
                     <span className="font-bold text-xl"> origin: </span>
                     {meal && meal.strArea}
                   </p>
+
+                  {/* ---------------FAVORITE TOGGLE BUTTON --------------------- */}
+                  <div
+                    className="relative pt-3 lg:pt-4 group"
+                    onClick={() => {
+                      !idPresent
+                        ? dispatch(addMeal(meal))
+                        : dispatch(removeMeal(meal.idMeal));
+                    }}
+                  >
+                    {idPresent ? (
+                      <FavoriteToggleButton
+                        favClass="activeFav mobileFavClass"
+                        strokeColor="white"
+                      />
+                    ) : (
+                      <FavoriteToggleButton favClass="mobileFavClass" />
+                    )}
+                  </div>
                 </div>
               </div>
               {/* -------------------INGREDIENTS AND MEASURES (if mobile)--------------------*/}

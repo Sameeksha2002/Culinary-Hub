@@ -13,6 +13,7 @@ import SearchByIngredients from "./components/MealByIngredients/SearchByIngredie
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Favorites from "./components/View/Favorites";
 
 function App() {
   //INITIALIZING AOS
@@ -25,6 +26,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
           <Route path="/search-meal" element={<SearchMeal />} />
           <Route path="/meal/:id" element={<Meal />} />
           <Route path="/all-categories" element={<CategoriesCont />} />
